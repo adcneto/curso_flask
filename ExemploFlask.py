@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect
+from flask import Flask, render_template, request, redirect, session
 
 app = Flask(__name__)
 
@@ -22,6 +22,7 @@ def index():
 
 @app.route('/novo')
 def novo():
+    # login()
     return render_template('novo.html', titulo='Novo Jogo')
 
 

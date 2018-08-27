@@ -1,9 +1,4 @@
-FROM registry.intranet.pagseguro.uol/base/debian:latest
-MAINTAINER l-pd-darwin
-LABEL source="https://stash.uol.intranet/scm/ygg/garm-stress.git" \
-    maintainer="l-pd-darwin" \
-    author="l-pd-darwin" \
-    slack="#darwin"
+FROM gliderlabs/alpine:3.3
 RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
 COPY . .

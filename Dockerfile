@@ -7,9 +7,6 @@ LABEL source="https://stash.uol.intranet/scm/ygg/garm-stress.git" \
 RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
 COPY . .
-# ARG http_proxy=http://pagseguro.proxy.srv.intranet:80
-# ARG https_proxy=http://pagseguro.proxy.srv.intranet:80
-# download stress-ng sources
 
 RUN apt-get update && \
     apt-get -y install python3.5 python3-pip stress-ng && \
